@@ -589,25 +589,30 @@ body{
 }
 
 .product-slider {
-    width: 33.4%;
-    margin: 0 39px;
-    &-name-container {
-	    display: flex;
-	    justify-content: space-between;
-	}
+    width:100%;
 	&-name {
         padding: 0 25px;
-    	margin-bottom: 20px;
+        margin-bottom: 20px;
+        margin-left: 36px;
 	}
 	&-name--accessories {
 	    padding: 0 40px;
 	}
 }
+.product-slider-content {
+    overflow: hidden;
+    position: relative;
+}
 .product-slider-content__item {
-    display: none;
+    left: -958px;
+    display: inline-block;
+    float: left;
+    width: 100%;
+    position: absolute;
 }
 .product-slider-content__item.active {
     display: block;
+    left: 0;
 }
 .product-description {
     width: 55%;
@@ -618,10 +623,11 @@ body{
 	}
 	&__podelitsia-soc-seti{
 		font-family: Menuetscript;
-		font-size: 22px;
-		text-align: right;
-		color:#252525;
-	    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: right;
+    color: #252525;
+    margin-bottom: 20px;
+    float: right;
 	}
 	&__name {
 	    font-size: 22px;

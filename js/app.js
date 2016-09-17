@@ -13,22 +13,22 @@ jQuery(document).ready(function ($) {
         dots:true,
         initialSlide: 0,
     });
-
-
+	
 
      $('.slider-product').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         speed: 1000,
         arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnHover: false,
-        dots:false,
-        initialSlide: 0,
+
+         fade:true,
         prevArrow: '<span class="slick-prev slick-nav slick-nav--prev" aria-label="previous"></span>',
         nextArrow: '<span class="slick-next slick-nav slick-nav--next" aria-label="next"></span>'
     });
+	
 
 
      //menu
@@ -77,9 +77,24 @@ jQuery(document).ready(function() { // Р В·Р В°Р С—РЎС“РЎРѓР
                  }
              );
      });
+
+
+
 });
 
+$(document).ready(function() {
+	var slide = $('.product-slider-content__item').height();
+	var slide_cong = $('.product-slider-content').height(slide);
+	var slide_item = $('.product-slider-content__item').width();
+	
+	if($('.product-slider-content__item').hasClass('active')){
+		$(this).css('left', 0);
 
+		}else{
+			$('.product-slider-content__item').css('left', (slide_item));
+		}
+
+});
 
 jQuery(document).ready(function() {
  $('.aside-list__item___head').on('click', function () {
